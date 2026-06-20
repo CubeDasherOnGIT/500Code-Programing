@@ -168,7 +168,7 @@ def textshow():
         print(text)
         cmd()
 
-def download():
+def dwld():
     folderpath = input("Enter folder path: ")
     fileend = ".FiveHundred.py"
     filestart = input("Enter file name: ")
@@ -208,6 +208,8 @@ def cmd():
         exit()
     elif command == "textshow":
         textshow()
+    elif command == "download":
+        dwld()
     elif command == "penmode":
         penmode()
     else:
