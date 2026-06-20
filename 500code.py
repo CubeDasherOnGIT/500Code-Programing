@@ -57,6 +57,12 @@ def pencmd():
     pencommand = input()
     if pencommand == "penhelp":
         penhelp()
+    elif pencommand == "textshow":
+        textshow()
+    elif pencommand == "pendown":
+        pendown()
+    elif pencommand == "penup":
+        penup()
     elif pencommand == "exit":
         exit()
     elif pencommand == "forward":
@@ -84,6 +90,22 @@ def penhelp():
         cmd()
     else:
         browser.open("https://cubedasherongit.github.io/500codehelp/help/penhelp.html/")
+        pencmd()
+
+def pendown():
+    if penmode == False:
+        print("Pen mode is not activated. Type 'penmode' to enter pen mode.")
+        cmd()
+    else:
+        t.pendown()
+        pencmd()
+
+def penup():
+    if penmode == False:
+        print("Pen mode is not activated. Type 'penmode' to enter pen mode.")
+        cmd()
+    else:
+        t.penup()
         pencmd()
 
 def penforward():
