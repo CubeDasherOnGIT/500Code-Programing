@@ -1,5 +1,5 @@
 import turtle as pen
-t = pen.Turtle()  # Fixed: Capitalized Turtle() to prevent immediate crash
+t = pen.Turtle()
 import time as waittime
 import webbrowser as browser
 import os as download
@@ -8,7 +8,7 @@ import sys
 
 def startup():
     pen.speed(1)
-    t.speed(1)  # Fixed: Passed an integer instead of the pen.speed function
+    t.speed(1)
     pen.bgcolor("black")
     print("500 Coding Language")
     print("Made Intirely In Python")
@@ -21,9 +21,9 @@ def help():
     if is_pen_mode == True:
         print("You are currently in pen mode. Type 'normalmode' to exit pen mode and access normal commands.")
     else:
-        browser.open("https://cubedasherongit.github.io/500codehelp/help/basichelp.html/")
+        browser.open("https://cubedasherongit.github.io/500Code-Programing/help/basichelp.html/")
 
-def exit_program():  # Renamed to avoid using python's built-in exit keyword
+def exit_program():
     print("Exiting...")
     waittime.sleep(1)
     sys.exit()
@@ -38,7 +38,7 @@ def penmode():
         is_pen_mode = True
         is_normal_mode = False
         print("Pen mode activated. Normal commands are disabled. Type 'normalmode' to exit pen mode.")
-        pencmd()  # Fixed: Initiates the pen loop after switching states
+        pencmd()
 
 def normalmode():
     global is_pen_mode, is_normal_mode
@@ -49,7 +49,7 @@ def normalmode():
         waittime.sleep(1)
         is_pen_mode = False
         is_normal_mode = True
-        cmd()  # Fixed: Initiates the normal loop after switching states
+        cmd()
 
 def pencmd():
     while True:
@@ -88,7 +88,7 @@ def penhelp():
     if is_pen_mode == False:
         print("Pen mode is not activated. Type 'penmode' to enter pen mode.")
     else:
-        browser.open("https://cubedasherongit.github.io/500codehelp/help/penhelp.html/")
+        browser.open("https://cubedasherongit.github.io/500Code-Programing/help/penhelp.html/")
 
 def pendown():
     if is_pen_mode == False:
@@ -99,7 +99,6 @@ def pendown():
 def penup():
     if is_pen_mode == False:
         print("Pen mode is not activated. Type 'penmode' to enter pen mode.")
-        # Fixed: Removed the breaking cmd() call from here
     else:
         t.penup()
 
